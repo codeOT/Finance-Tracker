@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useFirestore } from '../../hooks/useFirestore'
 
 function TransactionForm({ uid }) {
@@ -16,11 +15,10 @@ function TransactionForm({ uid }) {
         amount
       })
     }
-
-    useEffect(()=>{
+    useEffect(() => {
       if(response.success){
-        setName('')
-        setAmount('')
+        setName()
+        setAmount()
       }
     },[response.success])
 
@@ -39,7 +37,7 @@ function TransactionForm({ uid }) {
       </label>
 
       <label htmlFor="">
-        <span>Amount ($):</span>
+        <span>Amount (₦):</span>
         <input 
         type="text"
         required

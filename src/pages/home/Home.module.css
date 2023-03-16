@@ -1,6 +1,6 @@
 .container{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 2fr;
     max-width: 960px;
     margin: 60px auto;
   }
@@ -8,7 +8,7 @@
     padding-right: 30px;
   }
   .sidebar {
-    padding-left: 30px;
+    padding-left: 0px;
   }
   .sidebar form {
     padding: 20px;
@@ -87,4 +87,20 @@
     text-align: center;
     line-height: 0;
     cursor: pointer;
+  }
+
+  /* responsiveness */
+  @media (max-width: 600px) {
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+      /* grid-template-columns: 2fr 1fr; */
+      max-width: 960px;
+      margin: 60px auto;
+    }
+    .sidebar {
+      padding-left: 0px;
+      margin: auto;
+      width: 80%;
+    }
   }
