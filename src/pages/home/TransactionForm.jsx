@@ -17,8 +17,8 @@ function TransactionForm({ uid }) {
     }
     useEffect(() => {
       if(response.success){
-        setName()
-        setAmount()
+        setName('')
+        setAmount('')
       }
     },[response.success])
 
