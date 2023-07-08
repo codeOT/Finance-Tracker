@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useFirestore } from '../../hooks/useFirestore'
+import styles from './Home.module.css'
 
 function TransactionForm({ uid }) {
-    const [name, setName ] = useState('')
+    const [name, setName] = useState('')
     const [amount, setAmount] = useState('')
-    const { addDocument, response} = useFirestore('transactions')
+    const {addDocument, response} = useFirestore('transactions')
 
 
     const handleSubmit = (e) => {
@@ -18,14 +19,9 @@ function TransactionForm({ uid }) {
       setName('')
       setAmount('')
     }
-    // useEffect(() => {
-    //   if(response.success){
-    //     setName('')
-    //     setAmount('')
-    //   }
-    // },[response.success])
 
   return (
+    <section>
     <>
     <h3> Add a Transaction</h3>
     <form action="" onSubmit={handleSubmit}>
@@ -42,7 +38,7 @@ function TransactionForm({ uid }) {
       <label htmlFor="">
         <span>Amount (₦):</span>
         <input 
-        type="text"
+        type="number"
         required
         onChange={(e)=> setAmount(e.target.value)}
         value={amount}
@@ -50,8 +46,10 @@ function TransactionForm({ uid }) {
       </label>
       <button>Add Transaction</button>
     </form>
-
     </>
+
+    
+    </section>
   )
 }
 

@@ -3,6 +3,8 @@
     background: #effaf0;
     padding: 20px 10px;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
 }
 .navbar ul{
     display: flex;

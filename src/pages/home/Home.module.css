@@ -42,6 +42,9 @@
     display: block;
     width: 100%;
   }
+  .sidebar button:hover{
+    color: #fff;
+  }
   .sidebar h3 {
     color: #1f9751;
     margin-bottom: 20px;
@@ -66,8 +69,9 @@
     border-left: 4px solid #1f9751;
   }
   .transactions .name{
-    color: #777;
+    color: #383838;
     font-size: 1.4em;
+    text-transform: capitalize;
   }
   .transactions .amount{
     margin-left: auto;
@@ -88,6 +92,13 @@
     line-height: 0;
     cursor: pointer;
   }
+  .total{
+    margin-top: 3rem;
+  }
+  .amt{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 
   /* responsiveness */
   @media (max-width: 600px) {
@@ -103,4 +114,8 @@
       margin: auto;
       width: 80%;
     }
+    .total{
+      text-align: center;
+    }
+  
   }
